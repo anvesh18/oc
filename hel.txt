@@ -1,0 +1,31 @@
+import Cocoa
+var myString = "anvesh!"
+println(myString)
+var myString2 = "akhil"; println(myString2)
+var varA = 42
+println(varA)
+var varB = 3.14159
+println(varB)
+var varC = 3 + 0.14159
+println(varC)
+var varA = "gates"
+var varB = 1000
+println("Value of \(varA) is more than \(varB) millions")
+let constA = 42
+println(constA)
+var str = ""
+if str.isEmpty {
+   println( "str is empty" )
+}else {
+   println( "str is not empty" )
+}
+let sB = String()
+if sB.isEmpty {
+   println( "sB is empty" )
+}else {
+   println( "sB is not empty" )
+}
+let cA = "abc"
+let cB = "deg"
+var Aa = cA + cB
+println( Aa )

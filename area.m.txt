@@ -1,0 +1,43 @@
+#import <Foundation/Foundation.h>
+@interface Square:NSObject
+{
+   float area;
+}
+- (void)calculateAreaOfSide:(Float)side;
+- (void)printArea;
+@end
+@implementation Square
+- (void)calculateAreaOfSide:(Float)side
+{
+    area = side*side;
+}
+- (void)printArea
+{
+    NSLog(@"The area of square is %f",area);
+}
+@end
+@interface Rectangle:NSObject
+{
+   float area;
+}
+- (void)calculateAreaOfLength:(CGFloat)length and (CGFloat)breadth;
+- (void)printArea;
+@end
+@implementation  Rectangle
+- (void)calculateAreaOfLength:(CGFloat)length and (CGFloat)breadth
+{
+    area = length * breadth;
+}
+- (void)printArea
+{
+    NSLog(@"The area of Rectangle is %f",area);
+}
+@end
+int main()
+{
+   Square *square = [[Square alloc]init];
+   [square calculateAreaOfSide:10.0];
+   Rectangle *rectangle = [[Rectangle alloc]init];
+   [rectangle calculateAreaOfLength:10.0 andBreadth:5.0];
+   return 0;
+}

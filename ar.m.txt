@@ -1,0 +1,11 @@
+#import <Foundation/Foundation.h>
+int main()
+{
+   NSArray *array = [[NSArray alloc]
+   initWithObjects:@"an1", @"anv2",@"anves3",nil];
+   for(NSString *anvesh in array)
+   {
+      NSLog(@"Value: %@",anvesh;
+   }
+   return 0;
+}

@@ -1,0 +1,36 @@
+#import <Foundation/Foundation.h>
+@protocol PrintProtocolDelegate
+- (void)processCompleted;
+@end
+@interface PrintClass :NSObject
+{
+    id delegate;
+}
+- (void) printDetails;
+- (void) setDelegate:(id)newDelegate;
+@end
+@implementation PrintClass
+- (void)printDetails{
+    NSLog(@"Printing Details");
+}
+- (void) setDelegate:(id)newDelegate{
+    delegate = newDelegate;
+}
+@end
+@interface SampleClass:NSObject<PrintProtocolDelegate>
+- (void)startAction;
+@end
+@implementation SampleClass
+- (void)startAction{
+    PrintClass *printClass = [[PrintClass alloc]init];
+}
+-(void)processCompleted{
+    NSLog(@"Printing Process Completed");
+}
+@end
+
+int main(int argc, const char * argv[])
+{
+    SampleClass *sampleClass = [[SampleClass alloc]init];
+    return 0;
+}
