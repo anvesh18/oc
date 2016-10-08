@@ -1,0 +1,30 @@
+func stu(name: String) -> String {
+   return name
+}
+println(stu("an"))
+println(stu("Functions"))
+
+
+func display(num: Int) -> Int {
+   let abc = num
+   return anv
+}
+
+println(display(100))
+println(display(200))
+
+
+func multiple(no1: Int, no2: Int) -> Int {
+   return no1*no2
+}
+println(multiple(2,20))
+println(multiple(3,15))
+println(multiple(4,30))
+
+
+
+
+func name() -> String {
+   return "Akil"
+}
+println(name()) 

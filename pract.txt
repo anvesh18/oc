@@ -1,0 +1,36 @@
+struct sum {
+   var n1 = 100, n2 = 200
+}
+
+struct diff {
+   var no1 = 200, no2 = 100
+}
+
+struct mult {
+   var a = sum()
+   var b = diff()
+}
+
+let calc = mult()
+println ("Inside mult block \(calc.a.n1, calc.a.n2)")
+println("Inside mult block \(calc.b.no1, calc.b.no2)")
+
+let mcalc = mult(a: sum(num1: 300, num2: 500),b: diff(no1: 300, no2: 100))
+
+println("Inside mult block \(mcalc.a.num1, mcalc.a.num2)")
+println("Inside mult block \(mcalc.b.no1, mcalc.b.no2)")
+
+extension mult {
+   init(x: sum, y: diff) {
+      let X = x.num1 + x.num2
+      let Y = y.no1 + y.no2
+   }
+}
+
+
+let a = sum(n1: 100, n2: 200)
+println("Inside Sum Block:\( a.n1, a.n2)")
+
+
+let b = diff(no1: 200, no2: 100)
+println("Inside Diff Block: \(b.no1, b.no2)")
