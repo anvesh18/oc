@@ -1,0 +1,30 @@
+func sab(array: [Int]) -> (large: Int, small: Int) {
+   var lar = array[0]
+   var sma = array[0]
+   for i in array[1..<array.count] {
+      if i < sma {
+         sma = i
+      }else if i > lar {
+         lar = i
+      }
+   }
+   return (lar, sma)
+}
+let num = sab([80,112,-5,728,98])
+println("Largest number is: \(num.large) and smallest number is: \(num.small)")
+
+func sum(a: Int, b: Int) {
+   let a = a + b
+   let b = a - b
+   println(a, b)
+}
+sum(20, 10)
+sum(40,10)
+sum(24,6)
+
+
+func sum(a: Int, b: Int) -> Int {
+   return a + b
+}
+var addition: (Int, Int) -> Int = sum
+println("Result: \(addition(40, 89))")
