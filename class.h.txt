@@ -1,0 +1,19 @@
+@interface MyClass:NSObject{ 
+   // class variable declared here
+}
+
+// class properties declared here
+// class methods and instance methods declared here
+@end
+
+
+@interface MyClass(customAdditions)
+- (void)sampleCategoryMethod;
+@end
+
+@implementation MyClass(categoryAdditions)
+
+-(void)sampleCategoryMethod{
+   NSLog(@"Just a test category");
+}
+
