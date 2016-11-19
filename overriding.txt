@@ -1,0 +1,17 @@
+ass cricket {
+   func print() {
+      println("Welcome to cricket ground")
+   }
+}
+
+class tennis: cricket {
+   override func print() {
+      println("Welcome to tennis stadium")
+   }
+}
+
+let cricinstance = cricket()
+cricinstance.print()
+
+let tennisinstance = tennis()
+tennisinstance.print()

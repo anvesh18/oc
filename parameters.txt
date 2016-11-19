@@ -1,0 +1,24 @@
+struct Days {
+   let sunday, monday, tuesday: Int
+   init(sunday: Int, monday: Int, tuesday: Int) {
+      self.sunday = sunday
+      self.monday = monday
+      self.tuesday = tuesday
+   }
+
+   init(daysofaweek: Int) {
+      sunday = daysofaweek
+      monday = daysofaweek
+      tuesday = daysofaweek
+   }
+}
+
+let week = Days(sunday: 1, monday: 2, tuesday: 3)
+println("Days of a Week is: \(week.sunday)")
+println("Days of a Week is: \(week.monday)")
+println("Days of a Week is: \(week.tuesday)")
+
+let weekdays = Days(daysofaweek: 4)
+println("Days of a Week is: \(weekdays.sunday)")
+println("Days of a Week is: \(weekdays.monday)")
+println("Days of a Week is: \(weekdays.tuesday)")

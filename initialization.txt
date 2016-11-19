@@ -1,0 +1,30 @@
+struct square {
+   var length = 6
+   
+var area = square()
+println("area of square is \(area.length*area.length)")
+
+
+struct Rectangle {
+   var length: Double
+   var breadth: Double
+   var area: Double
+
+   init(fromLength length: Double, fromBreadth breadth: Double) {
+      self.length = length
+      self.breadth = breadth
+      area = length * breadth
+   }
+
+   init(fromLeng leng: Double, fromBread bread: Double) {
+      self.length = leng
+      self.breadth = bread
+      area = leng * bread
+   }
+}
+
+let ar = Rectangle(fromLength: 6, fromBreadth: 12)
+println("area is: \(ar.area)")
+
+let are = Rectangle(fromLeng: 36, fromBread: 12)
+println("area is: \(are.area)")
